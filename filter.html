@@ -19,7 +19,7 @@
 							Выбор квартиры
 						</a></li>
 					<li class="menu__item">
-						<a href="" class="menu__link">
+						<a href="" class="menu__link menu__link--company">
 							О компании
 						</a>
 					</li>
@@ -28,7 +28,7 @@
 							Новости
 						</a>
 					</li>
-					<li class="menu__item">
+					<li class="menu__item menu__item--contact">
 						<a href="" class="menu__link">
 							Контакты
 						</a>
@@ -39,7 +39,7 @@
 				<a href="tel:+7(812)649-72-34" class="page-header__info-link">
 					+7 (812) 649-75-34
 				</a>
-				<span class="page-header__info-text">
+				<span class="page-header__info-text page-header__info-text--one">
 					пн-пт 9:00-21:00
 				</span>
 				<span class="page-header__info-text">
@@ -50,48 +50,110 @@
 	</header>
 	<main>
 		<section class="filter">
-			<h2 class="filter__title">
-				Выбор квартиры
-			</h2>
-			<form action="" class="filter__form">
-				<fieldset class="filter__fieldset">
-					<div class="filter__room-inner">
-						<span class="filter__room-name">Количество комнат</span>
-						<div class="filter__room-descr">
-							<label></label>
-							<input class="filter__room-input filter__room-input--studio" type="text" value="Студия">
-							<label></label>
-							<input class="filter__room-input filter__room-input--one" type="text" value="1">
-							<label></label>
-							<input class="filter__room-input filter__room-input--two" type="text"  value="2">
-							<label></label>
-							<input class="filter__room-input filter__room-input--three" type="text" value="3+">
-						</div>
-					</div>
-				</fieldset>
-				<fieldset class="filter__fieldset">
-					<div class="filter__house-inner">
-						<div class="filter__house-box">
-							<label class="filter__house-name" for="unit">Секция</label>
-							<select class="filter__house-select" name="unit" id="unit">
-								<option value="">2</option>
-							</select>
-						</div>
-						<div class="filter__house-box">
-							<label class="filter__house-name" for="housing">Корпус</label>
-							<select class="filter__house-select" name="housing" id="housing">
-								<option value="">1</option>
-							</select>
-						</div>
-						<div class="filter__house-box">
-							<label class="filter__house-name" for="year">Год сдачи</label>
-							<select class="filter__house-select" name="year" id="year">
-								<option value="">2021</option>
-							</select>
-						</div>
-					</div>
-				</fieldset>
-			</form>
+			<div class="filter__wrapper">
+				<h1 class="filter__title">
+					Выбор квартиры
+				</h1>
+				<form action="" class="filter__form">
+					<div class="filter__form-inner">
+						<fieldset class="filter__fieldset">
+							<div class="filter__room-inner">
+								<span class="filter__room-name">Количество комнат</span>
+								<div class="filter__room-descr">
+									<label></label>
+									<input class="filter__room-input filter__room-input--studio" type="text" value="Студия">
+									<label></label>
+									<input class="filter__room-input filter__room-input--one" type="text" value="1">
+									<label></label>
+									<input class="filter__room-input filter__room-input--two" type="text"  value="2">
+									<label></label>
+									<input class="filter__room-input filter__room-input--three" type="text" value="3+">
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="filter__fieldset">
+							<div class="filter__house-inner">
+								<div class="filter__house-box">
+									<label class="filter__house-name" for="unit">Секция</label>
+									<select class="filter__house-select" name="unit" id="unit">
+										<option value="">2</option>
+									</select>
+								</div>
+								<div class="filter__house-box">
+									<label class="filter__house-name" for="housing">Корпус</label>
+									<select class="filter__house-select" name="housing" id="housing">
+										<option value="">1</option>
+									</select>
+								</div>
+								<div class="filter__house-box">
+									<label class="filter__house-name" for="year">Год сдачи</label>
+									<select class="filter__house-select" name="year" id="year">
+										<option value="">2021</option>
+									</select>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="filter__fieldset">
+							<div class="filter-range__inner">
+								<div class="filter-range">
+									<div class="filter-range-title">Площадь квартиры</div>
+				  				<div class="range-controls range-controls--area">
+				    			<div class="scale">
+				      			<div class="bar"></div>
+				    			</div>
+				    			<div class="range-toggle range-toggle-min--area"></div>
+				    			<div class="range-toggle range-toggle-max--area">
+										<span>100 м2</span>
+				    			</div>
+				  				</div>
+				  				<div class="price-controls price-controls--area">
+				    				<label class="min-price"><input type="text" name="min-price" value="25 м2"></label>
+				    				<label class="max-price"><input type="text" name="max-price" value="230 м2"></label>
+				  				</div>
+								</div>
+								<div class="filter-range">
+									<div class="filter-range-title">Стоимость квартиры</div>
+				  				<div class="range-controls range-controls--price">
+				    			<div class="scale">
+				      			<div class="bar"></div>
+				    			</div>
+				    			<div class="range-toggle range-toggle-min--price">
+				    				<span>6,5 млн.р.</span>
+				    			</div>
+				    			<div class="range-toggle range-toggle-max--price">
+				    				<span>8,5 млн.р.</span>
+				    			</div>
+				  				</div>
+				  				<div class="price-controls price-controls--price">
+				    				<label class="min-price"><input type="text" name="min-price" value="1,5 млн.р."></label>
+				    				<label class="max-price"><input type="text" name="max-price" value="25 млн.р."></label>
+				  				</div>
+								</div>
+								<div class="filter-range">
+									<div class="filter-range-title">Этаж</div>
+				  				<div class="range-controls range-controls--floor">
+				    			<div class="scale">
+				      			<div class="bar"></div>
+				    			</div>
+				    			<div class="range-toggle range-toggle-min--floor">
+				    				<span>3</span>
+				    			</div>
+				    			<div class="range-toggle range-toggle-max--floor">
+				    				<span>16</span>
+				    			</div>
+				  				</div>
+				  				<div class="price-controls price-controls--floor">
+				    					<label class="min-price">
+				    						<input type="text" name="min-price" value="1"></label>
+				    					<label class="max-price"><input type="text" name="max-price" value="23"></label>
+				  				</div>
+								</div>
+							</div> 
+					</fieldset>
+				</div>
+				<buttom class="filter__form-btn">Подобрать квартиру</buttom>
+				</form>
+			</div>
 		</section>
 		<section class="gallery">
 			<h2 class="gallery__title">
